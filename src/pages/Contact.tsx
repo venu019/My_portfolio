@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SectionHeading from '@/components/SectionHeading';
 import ContactForm from '@/components/ContactForm';
-import { Mail, Linkedin, Github, Instagram, Phone } from 'lucide-react';
+import { Mail, Linkedin, Github, Instagram, Phone, WhatsApp } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -36,11 +36,11 @@ const Contact = () => {
               <ContactForm />
             </div>
             
-            {/* Contact Information */}
+            {/* Contact Information and Social Media */}
             <div>
               <h3 className="text-2xl font-semibold mb-6">Connect with me</h3>
               
-              <div className="flex justify-between mb-12">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12">
                 <a href="mailto:venugopalchelliboyina@gmail.com" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
                   <div className="bg-gray-100 p-4 rounded-full mb-3">
                     <Mail size={24} className="text-portfolio-blue" />
@@ -74,6 +74,13 @@ const Contact = () => {
                     <Phone size={24} className="text-portfolio-blue" />
                   </div>
                   <span className="text-sm">Phone</span>
+                </a>
+                
+                <a href="https://wa.me/919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                  <div className="bg-gray-100 p-4 rounded-full mb-3">
+                    <WhatsApp size={24} className="text-portfolio-blue" />
+                  </div>
+                  <span className="text-sm">WhatsApp</span>
                 </a>
               </div>
               
