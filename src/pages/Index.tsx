@@ -16,69 +16,132 @@ import EducationCard from '@/components/EducationCard';
 const Index = () => {
   // Sample projects data
   const featuredProjects = [
+    // {
+    //   id: 'ecommerce',
+    //   title: 'E-Commerce Website Using MERN Stack',
+    //   image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
+    //   technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
+    //   description: 'Designed an admin panel to manage products, delivery status and carousel images, reducing admin task time by 35%. Built a user-friendly interface with product filtering, cart, and review features, boosting user engagement by 40%.'
+    // },
+    // {
+    //   id: 'comments',
+    //   title: 'Detection of Abusive Comments in Social Media',
+    //   image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+    //   technologies: ['Python', 'TensorFlow', 'Pandas', 'NumPy', 'Deep Learning'],
+    //   description: 'Developed machine learning models to classify social media comments into \'hate speech,\' \'normal,\' and \'offensive,\' improving content moderation accuracy by 30%.'
+    // },
+    // {
+    //   id: 'devops',
+    //   title: 'DevOps Capstone Project',
+    //   image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+    //   technologies: ['Flask', 'Docker', 'Kubernetes', 'GitHub Workflows', 'Tekton', 'OpenShift'],
+    //   description: 'Developed a Flask app and deployed using Docker and Kubernetes, automating CI/CD with GitHub Workflows, Tekton, and OpenShift, reducing deployment time by 50%.'
+    // },
     {
-      id: 'ecommerce',
-      title: 'E-Commerce Website Using MERN Stack',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
-      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
-      description: 'Designed an admin panel to manage products, delivery status and carousel images, reducing admin task time by 35%. Built a user-friendly interface with product filtering, cart, and review features, boosting user engagement by 40%.'
-    },
-    {
-      id: 'comments',
-      title: 'Detection of Abusive Comments in Social Media',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
-      technologies: ['Python', 'TensorFlow', 'Pandas', 'NumPy', 'Deep Learning'],
-      description: 'Developed machine learning models to classify social media comments into \'hate speech,\' \'normal,\' and \'offensive,\' improving content moderation accuracy by 30%.'
-    },
-    {
-      id: 'devops',
-      title: 'DevOps Capstone Project',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-      technologies: ['Flask', 'Docker', 'Kubernetes', 'GitHub Workflows', 'Tekton', 'OpenShift'],
-      description: 'Developed a Flask app and deployed using Docker and Kubernetes, automating CI/CD with GitHub Workflows, Tekton, and OpenShift, reducing deployment time by 50%.'
+      id: "ecommerce-mern",
+      title: "E-Commerce Website Using MERN Stack",
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e', // <== Update with your actual image path
+      technologies: [
+        "HTML", "React.js", "CSS", "Node.js",
+        "Express.js", "MongoDB", "JWT", "GitHub"
+      ],
+      description: "Designed a full-stack e-commerce platform featuring an admin panel, user-friendly interfaces, secure authentication, and optimized performance.",
+      features: [
+        "Admin panel to manage products, delivery status, and carousel images",
+        "Product filtering, cart, and review system for users",
+        "JWT-based authentication for secure login",
+        "Optimized performance using Redux"
+      ],
+      challenges: [
+        "Ensuring smooth admin-user role management",
+        "Building real-time cart updates without full page reloads",
+        "Securing sensitive user and admin operations"
+      ],
+      outcome: "Reduced admin task time by 35%, boosted user engagement by 40%, and cut page reload times by 20%."
     }
+    ,
+    {
+      id: "abusive-comment-detection",
+      title: "Detection of Abusive Comments in Social Media Using Deep Learning",
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158', // <== Update with your actual image path
+      technologies: [
+        "Python", "TensorFlow", "Pandas", "NumPy", "GitHub"
+      ],
+      description: "Built deep learning models to classify social media comments, enhancing content moderation capabilities.",
+      features: [
+        "Classified comments into 'hate speech', 'normal', and 'offensive'",
+        "Implemented BERT model for high accuracy classification"
+      ],
+      challenges: [
+        "Handling imbalanced data during training",
+        "Fine-tuning BERT without overfitting"
+      ],
+      outcome: "Improved content moderation accuracy by 30% and achieved 76.82% model accuracy."
+    }
+    ,
+    {
+      id: "devops-capstone",
+      title: "DevOps Capstone Project",
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b', // <== Update with your actual image path
+      technologies: [
+        "Flask", "GitHub Workflows", "Tekton",
+        "OpenShift", "Bash", "Docker"
+      ],
+      description: "Developed and deployed a Flask application with fully automated CI/CD pipelines using modern DevOps tools.",
+      features: [
+        "Containerized Flask app with Docker",
+        "Automated deployments with GitHub Actions, Tekton, and OpenShift",
+        "Environment setup automation with Bash scripts"
+      ],
+      challenges: [
+        "Integrating multiple CI/CD tools seamlessly",
+        "Handling Kubernetes configurations dynamically"
+      ],
+      outcome: "Deployment time reduced by 50%, environment setup time cut by 40%, and team collaboration improved with Agile practices."
+    }
+
   ];
 
   const programmingLanguages = ['Java', 'Python', 'JavaScript', 'HTML', 'CSS'];
   const webDevelopmentSkills = ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux'];
-  const databaseAndTools = ['MYSQL', 'MongoDB', 'GitHub', 'Docker' , 'Kubernetes'];
-  const csConcepts = ['Data Structures & Algorithms','Machine Learning','Cloud Computing','Computer Network']
+  const databaseAndTools = ['MYSQL', 'MongoDB', 'GitHub', 'Docker', 'Kubernetes'];
+  const csConcepts = ['Data Structures & Algorithms', 'Machine Learning', 'Cloud Computing', 'Computer Network']
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       {/* Hero Section */}
-      <Hero />
-      
+      <section id="home"><Hero /></section>
+
       {/* About Section */}
-      <About />
+      <section id="about"><About /></section>
 
       {/* Education Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <SectionHeading subtitle="My Education" title="Academic Background" />
-          
+
           <div className="max-w-3xl mx-auto">
             <EducationCard
-              school = "Sagi Ramakrishnam Raju Engineering College bhimavaram,AP" 
-              degree ="B.Tech in Information Technology"
-              timeline ="Jun 2021 - May 2024"
-              location ="" 
+              school="Sagi Ramakrishnam Raju Engineering College bhimavaram,AP"
+              degree="B.Tech in Information Technology"
+              timeline="Jun 2021 - May 2024"
+              location=""
               gpa=''
             />
             <EducationCard
-              school = "Smt.B.Seetha Polytechnic bhimavaram,AP" 
-              degree ="Diploma in Computer Engineering"
-              timeline ="Jun 2018 - May 2021"
-              location ="" 
+              school="Smt.B.Seetha Polytechnic bhimavaram,AP"
+              degree="Diploma in Computer Engineering"
+              timeline="Jun 2018 - May 2021"
+              location=""
               gpa=''
             />
             <EducationCard
-              school = "Gitanjali Grammar High School Dhone,AP" 
-              degree ="SSC"
-              timeline ="May 2018"
-              location ="" 
+              school="Gitanjali Grammar High School Dhone,AP"
+              degree="SSC"
+              timeline="May 2018"
+              location=""
               gpa=''
             />
           </div>
@@ -89,7 +152,7 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <SectionHeading subtitle="My Experience" title="Work Experience" />
-          
+
           <div className="max-w-3xl mx-auto">
             <ExperienceCard
               title="Java Full-Stack Internship"
@@ -97,7 +160,7 @@ const Index = () => {
               company="Henotic Technology Pvt Ltd"
               description="Designed a real-time web application, enhancing customer satisfaction by 30% and optimizing server-side logic and database interactions using Java and MySQL, reducing response time by 20%."
             />
-            
+
             <ExperienceCard
               title="Machine Learning Internship"
               timeline="Jul 2022 - Sep 2022"
@@ -112,20 +175,22 @@ const Index = () => {
       <section id="projects" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <SectionHeading subtitle="My Projects" title="Featured Work" />
-          
+
           <p className="text-center max-w-3xl mx-auto mb-12 text-lg text-portfolio-text-gray">
             Explore some of my recent projects. Each project represents unique challenges and solutions across different domains and technologies.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto w-full justify-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto max-w-7xl">
             {featuredProjects.map((project) => (
-              <div className="flex-shrink-0 w-[300px] md:w-[400px]"> {/* Control each card width */}
+              <div key={project.id} className="flex-shrink-0 w-[350px] md:w-[400px] mx-auto"> {/* Center each card */}
                 <ProjectCard
-                  key={project.id}
                   id={project.id}
                   title={project.title}
                   image={project.image}
                   technologies={project.technologies}
                   description={project.description}
+                  features={project.features}
+                  challenges={project.challenges}
+                  outcome={project.outcome}
                 />
               </div>
             ))}
@@ -133,11 +198,12 @@ const Index = () => {
         </div>
       </section>
 
+
       {/* Skills Section Preview */}
-      <section className="py-16 bg-gray-50">
+      <section id="skills" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <SectionHeading subtitle="My Skills" title="Technical Expertise" />
-          
+
           <p className="text-center max-w-3xl mx-auto mb-12 text-lg text-portfolio-text-gray">
             I've worked with a variety of technologies and tools throughout my education and projects. Here's an overview of my technical skills and expertise.
           </p>
