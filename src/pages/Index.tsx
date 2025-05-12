@@ -36,7 +36,8 @@ const Index = () => {
         "Building real-time cart updates without full page reloads",
         "Securing sensitive user and admin operations"
       ],
-      outcome: "Reduced admin task time by 35%, boosted user engagement by 40%, and cut page reload times by 20%."
+      outcome: "Reduced admin task time by 35%, boosted user engagement by 40%, and cut page reload times by 20%.",
+      github:"https://github.com/venu019/E-commerce-MERN.git"
     }
     ,
     {
@@ -55,7 +56,8 @@ const Index = () => {
         "Handling imbalanced data during training",
         "Fine-tuning BERT without overfitting"
       ],
-      outcome: "Improved content moderation accuracy by 30% and achieved 76.82% model accuracy."
+      outcome: "Improved content moderation accuracy by 30% and achieved 76.82% model accuracy.",
+      github:"https://github.com/venu019/final-year-project.git"
     }
     ,
     {
@@ -76,7 +78,8 @@ const Index = () => {
         "Integrating multiple CI/CD tools seamlessly",
         "Handling Kubernetes configurations dynamically"
       ],
-      outcome: "Deployment time reduced by 50%, environment setup time cut by 40%, and team collaboration improved with Agile practices."
+      outcome: "Deployment time reduced by 50%, environment setup time cut by 40%, and team collaboration improved with Agile practices.",
+      github:"https://github.com/venu019/devops-capstone-project.git"
     }
 
   ];
@@ -170,6 +173,7 @@ const Index = () => {
                   features={project.features}
                   challenges={project.challenges}
                   outcome={project.outcome}
+                  githubLink={project.github}
                 />
               </div>
             ))}
