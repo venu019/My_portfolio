@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SectionHeading from '@/components/SectionHeading';
 import ContactForm from '@/components/ContactForm';
-import { Mail, Linkedin, Github, Instagram, Phone, WhatsApp } from 'lucide-react';
+import { Mail, Linkedin, Github, Instagram, Phone, MessageSquare } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -78,7 +78,7 @@ const Contact = () => {
                 
                 <a href="https://wa.me/919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
                   <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <WhatsApp size={24} className="text-portfolio-blue" />
+                    <MessageSquare size={24} className="text-portfolio-blue" />
                   </div>
                   <span className="text-sm">WhatsApp</span>
                 </a>

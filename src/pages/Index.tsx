@@ -8,8 +8,9 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Mail, Linkedin, Github, Instagram, Phone, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ContactForm from '@/components/ContactForm';
 
 const Index = () => {
   // Sample projects data
@@ -201,7 +202,7 @@ const Index = () => {
                 
                 <a href="https://wa.me/919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
                   <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <WhatsApp size={24} className="text-portfolio-blue" />
+                    <MessageSquare size={24} className="text-portfolio-blue" />
                   </div>
                   <span className="text-sm">WhatsApp</span>
                 </a>
