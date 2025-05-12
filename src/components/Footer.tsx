@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 pt-6 mt-6 text-center">
-          <p>&copy; 2025 Venu Gopal Chelliboyina. All rights reserved.</p>
+          <p>&copy; 2025 Chelliboyina Venu Gopal . All rights reserved.</p>
         </div>
       </div>
     </footer>
