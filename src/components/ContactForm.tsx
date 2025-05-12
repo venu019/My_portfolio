@@ -41,7 +41,7 @@ const ContactForm = () => {
       'XJoo9uMbKfeKT01EA' // Your Public Key
     )
       .then(() => {
-        toast.error('Message sent successfully!');
+        toast.success('Message sent successfully!');
         setFormData({
           user_name: '',
           user_email: '',
