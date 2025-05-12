@@ -5,8 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/sonner";
 import emailjs from '@emailjs/browser';
 
-const ContactForm = () => {
-  const form = useRef<HTMLFormElement>(null);
+
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',
@@ -41,7 +40,7 @@ const ContactForm = () => {
       'XJoo9uMbKfeKT01EA' // Your Public Key
     )
       .then(() => {
-        toast.error('Message sent successfully!');
+        toast.success('Message sent successfully!');
         setFormData({
           user_name: '',
           user_email: '',
@@ -56,7 +55,6 @@ const ContactForm = () => {
         toast.error('There was an error sending your message.');
         setIsSubmitting(false);
       });
-  };
 
   return (
     <form ref={form} onSubmit={handleSubmit} className="space-y-6">

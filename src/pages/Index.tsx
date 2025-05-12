@@ -16,27 +16,6 @@ import EducationCard from '@/components/EducationCard';
 const Index = () => {
   // Sample projects data
   const featuredProjects = [
-    // {
-    //   id: 'ecommerce',
-    //   title: 'E-Commerce Website Using MERN Stack',
-    //   image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
-    //   technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
-    //   description: 'Designed an admin panel to manage products, delivery status and carousel images, reducing admin task time by 35%. Built a user-friendly interface with product filtering, cart, and review features, boosting user engagement by 40%.'
-    // },
-    // {
-    //   id: 'comments',
-    //   title: 'Detection of Abusive Comments in Social Media',
-    //   image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
-    //   technologies: ['Python', 'TensorFlow', 'Pandas', 'NumPy', 'Deep Learning'],
-    //   description: 'Developed machine learning models to classify social media comments into \'hate speech,\' \'normal,\' and \'offensive,\' improving content moderation accuracy by 30%.'
-    // },
-    // {
-    //   id: 'devops',
-    //   title: 'DevOps Capstone Project',
-    //   image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-    //   technologies: ['Flask', 'Docker', 'Kubernetes', 'GitHub Workflows', 'Tekton', 'OpenShift'],
-    //   description: 'Developed a Flask app and deployed using Docker and Kubernetes, automating CI/CD with GitHub Workflows, Tekton, and OpenShift, reducing deployment time by 50%.'
-    // },
     {
       id: "ecommerce-mern",
       title: "E-Commerce Website Using MERN Stack",
