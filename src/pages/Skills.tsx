@@ -2,14 +2,13 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SectionHeading from '@/components/SectionHeading';
-import SkillsSection from '@/components/SkillsSection';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Skills = () => {
   const programmingLanguages = ['Java', 'Python', 'JavaScript', 'HTML', 'CSS'];
   const webDevelopment = ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux'];
   const databaseTools = ['MySQL', 'MongoDB', 'GitHub', 'Docker', 'Kubernetes'];
-  const machineLearning = ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy'];
-  const cloudPlatforms = ['AWS', 'Azure', 'Google Cloud', 'Heroku'];
+  const csConceptsSkills = ['Data Structures & Algorithms', 'Machine Learning', 'Cloud Computing', 'Computer Networks'];
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -34,31 +33,78 @@ const Skills = () => {
             I've worked with a variety of technologies and tools throughout my education and projects. Here's an overview of my technical skills and expertise.
           </p>
           
-          <div className="max-w-3xl mx-auto">
-            <SkillsSection
-              title="Programming Languages"
-              skills={programmingLanguages}
-            />
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+            <Card className="shadow-md">
+              <CardHeader>
+                <CardTitle>Programming Languages</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {programmingLanguages.map((skill, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-100 text-portfolio-blue px-3 py-1 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
             
-            <SkillsSection
-              title="Web Development"
-              skills={webDevelopment}
-            />
+            <Card className="shadow-md">
+              <CardHeader>
+                <CardTitle>Web Development</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {webDevelopment.map((skill, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-100 text-portfolio-blue px-3 py-1 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
             
-            <SkillsSection
-              title="Database & Tools"
-              skills={databaseTools}
-            />
+            <Card className="shadow-md">
+              <CardHeader>
+                <CardTitle>Database & Tools</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {databaseTools.map((skill, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-100 text-portfolio-blue px-3 py-1 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
             
-            <SkillsSection
-              title="Machine Learning"
-              skills={machineLearning}
-            />
-            
-            <SkillsSection
-              title="Cloud Platforms"
-              skills={cloudPlatforms}
-            />
+            <Card className="shadow-md">
+              <CardHeader>
+                <CardTitle>CS Concepts</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {csConceptsSkills.map((skill, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-100 text-portfolio-blue px-3 py-1 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

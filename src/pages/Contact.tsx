@@ -29,85 +29,57 @@ const Contact = () => {
             I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out to me!
           </p>
           
-          <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-            {/* Contact Form */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
-              <ContactForm />
+          <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
+            {/* Contact Information and Social Media */}
+            <div className="w-full md:w-1/3">
+              <div className="bg-white shadow-md rounded-lg p-6">
+                <h3 className="text-2xl font-semibold mb-6">Connect with me</h3>
+                
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  <a href="mailto:venugopalchelliboyina@gmail.com" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
+                      <Mail size={24} className="text-white" />
+                    </div>
+                  </a>
+                  
+                  <a href="https://linkedin.com/in/chelliboyina-venu-gopal-b90420233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
+                      <Linkedin size={24} className="text-white" />
+                    </div>
+                  </a>
+                  
+                  <a href="https://github.com/venu019" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
+                      <Github size={24} className="text-white" />
+                    </div>
+                  </a>
+                  
+                  <a href="https://instagram.com" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
+                      <Instagram size={24} className="text-white" />
+                    </div>
+                  </a>
+                  
+                  <a href="tel:+919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
+                      <Phone size={24} className="text-white" />
+                    </div>
+                  </a>
+                  
+                  <a href="https://wa.me/919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
+                      <MessageSquare size={24} className="text-white" />
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
             
-            {/* Contact Information and Social Media */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Connect with me</h3>
-              
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12">
-                <a href="mailto:venugopalchelliboyina@gmail.com" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <Mail size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">Email</span>
-                </a>
-                
-                <a href="https://linkedin.com/in/chelliboyina-venu-gopal-b90420233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <Linkedin size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">LinkedIn</span>
-                </a>
-                
-                <a href="https://github.com/venu019" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <Github size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">GitHub</span>
-                </a>
-                
-                <a href="https://instagram.com" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <Instagram size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">Instagram</span>
-                </a>
-                
-                <a href="tel:+919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <Phone size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">Phone</span>
-                </a>
-                
-                <a href="https://wa.me/919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <MessageSquare size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">WhatsApp</span>
-                </a>
-              </div>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold mb-4">Contact Info</h4>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone size={20} className="text-portfolio-blue mr-3" />
-                    <span>+91 9705506233</span>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <Mail size={20} className="text-portfolio-blue mr-3" />
-                    <span>venugopalchelliboyina@gmail.com</span>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <Github size={20} className="text-portfolio-blue mr-3" />
-                    <span>github.com/venu019</span>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <Linkedin size={20} className="text-portfolio-blue mr-3" />
-                    <span className="break-all">linkedin.com/in/chelliboyina-venu-gopal-b90420233</span>
-                  </div>
-                </div>
+            {/* Contact Form */}
+            <div className="w-full md:w-2/3">
+              <div className="bg-white shadow-md rounded-lg p-6">
+                <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
+                <ContactForm />
               </div>
             </div>
           </div>

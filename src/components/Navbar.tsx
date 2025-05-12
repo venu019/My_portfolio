@@ -24,18 +24,14 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link to="/" className="text-lg font-bold">
-          Venu Gopal Chelliboyina
-        </Link>
-
+      <div className="container mx-auto px-4 py-3 flex justify-end items-center">
         {/* Mobile menu button */}
         <button
           className="p-2 rounded-md"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <Menu size={24} />
         </button>
 
         {/* Mobile Navigation */}

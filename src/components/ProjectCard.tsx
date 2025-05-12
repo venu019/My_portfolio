@@ -20,23 +20,8 @@ const ProjectCard = ({ title, image, technologies, id, description }: ProjectCar
         />
       </div>
       
-      <div className="p-6 transition-transform duration-300 group-hover:transform group-hover:translate-x-2">
+      <div className="p-6 transition-transform duration-300 group-hover:translate-x-2">
         <h3 className="text-2xl font-semibold mb-4 transition-all group-hover:text-portfolio-blue">{title}</h3>
-        
-        <div className="flex flex-wrap gap-2 mb-4">
-          {technologies.map((tech, index) => (
-            <span
-              key={index}
-              className="bg-gray-100 text-portfolio-dark-gray px-3 py-1 rounded-full text-sm"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-        
-        {description && (
-          <p className="text-gray-600 mb-4">{description}</p>
-        )}
         
         <Link
           to={`/projects/${id}`}

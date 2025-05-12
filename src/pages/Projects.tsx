@@ -26,13 +26,6 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
       technologies: ['Flask', 'Docker', 'Kubernetes', 'GitHub Workflows', 'Tekton', 'OpenShift'],
       description: 'Developed a Flask app and deployed using Docker and Kubernetes, automating CI/CD with GitHub Workflows, Tekton, and OpenShift, reducing deployment time by 50%. Automated environment setup with Bash scripts, cutting setup time by 40% and ensuring consistency. Adopted Agile methodologies via GitHub Kanban board, improving sprint completion speed and team collaboration.'
-    },
-    {
-      id: 'portfolio',
-      title: 'Personal Portfolio Website',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
-      technologies: ['React', 'Tailwind CSS', 'Vite', 'TypeScript'],
-      description: 'Designed and developed a personal portfolio website using React, Tailwind CSS, and TypeScript. The website showcases my skills, projects, and experience in a responsive and modern design.'
     }
   ];
 
@@ -59,7 +52,7 @@ const Projects = () => {
             Explore some of my recent projects. Each project represents unique challenges and solutions across different domains and technologies.
           </p>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}
