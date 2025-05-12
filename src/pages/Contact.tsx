@@ -31,7 +31,7 @@ const Contact = () => {
           </p>
           
           <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
-            {/* Contact Information and Social Media */}
+            {/* Social Media Links - 30% width */}
             <div className="w-full md:w-3/10">
               <Card className="h-full">
                 <CardContent className="pt-6">
@@ -39,48 +39,48 @@ const Contact = () => {
                   
                   <div className="grid grid-cols-2 gap-4">
                     <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
-                      <a href="mailto:venugopalchelliboyina@gmail.com" className="flex flex-col items-center">
-                        <div className="bg-gray-900 p-4 rounded-full">
+                      <a href="mailto:venugopalchelliboyina@gmail.com" className="flex items-center justify-center">
+                        <div className="bg-portfolio-dark-blue p-4 rounded-full">
                           <Mail size={24} className="text-white" />
                         </div>
                       </a>
                     </Card>
                     
                     <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
-                      <a href="https://linkedin.com/in/chelliboyina-venu-gopal-b90420233" className="flex flex-col items-center">
-                        <div className="bg-gray-900 p-4 rounded-full">
+                      <a href="https://linkedin.com/in/chelliboyina-venu-gopal-b90420233" className="flex items-center justify-center">
+                        <div className="bg-portfolio-dark-blue p-4 rounded-full">
                           <Linkedin size={24} className="text-white" />
                         </div>
                       </a>
                     </Card>
                     
                     <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
-                      <a href="https://github.com/venu019" className="flex flex-col items-center">
-                        <div className="bg-gray-900 p-4 rounded-full">
+                      <a href="https://github.com/venu019" className="flex items-center justify-center">
+                        <div className="bg-portfolio-dark-blue p-4 rounded-full">
                           <Github size={24} className="text-white" />
                         </div>
                       </a>
                     </Card>
                     
                     <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
-                      <a href="https://instagram.com" className="flex flex-col items-center">
-                        <div className="bg-gray-900 p-4 rounded-full">
+                      <a href="https://instagram.com" className="flex items-center justify-center">
+                        <div className="bg-portfolio-dark-blue p-4 rounded-full">
                           <Instagram size={24} className="text-white" />
                         </div>
                       </a>
                     </Card>
                     
                     <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
-                      <a href="tel:+919705506233" className="flex flex-col items-center">
-                        <div className="bg-gray-900 p-4 rounded-full">
+                      <a href="tel:+919705506233" className="flex items-center justify-center">
+                        <div className="bg-portfolio-dark-blue p-4 rounded-full">
                           <Phone size={24} className="text-white" />
                         </div>
                       </a>
                     </Card>
                     
                     <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
-                      <a href="https://wa.me/919705506233" className="flex flex-col items-center">
-                        <div className="bg-gray-900 p-4 rounded-full">
+                      <a href="https://wa.me/919705506233" className="flex items-center justify-center">
+                        <div className="bg-portfolio-dark-blue p-4 rounded-full">
                           <MessageSquare size={24} className="text-white" />
                         </div>
                       </a>
@@ -90,7 +90,7 @@ const Contact = () => {
               </Card>
             </div>
             
-            {/* Contact Form */}
+            {/* Contact Form - 70% width */}
             <div className="w-full md:w-7/10">
               <Card className="h-full">
                 <CardContent className="pt-6">

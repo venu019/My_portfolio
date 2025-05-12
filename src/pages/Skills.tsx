@@ -33,7 +33,7 @@ const Skills = () => {
             I've worked with a variety of technologies and tools throughout my education and projects. Here's an overview of my technical skills and expertise.
           </p>
           
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="shadow-md">
               <CardHeader>
                 <CardTitle>Programming Languages</CardTitle>
