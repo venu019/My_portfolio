@@ -19,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			width: {
+				'3/10': '30%',
+				'7/10': '70%',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

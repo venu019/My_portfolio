@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import SectionHeading from '@/components/SectionHeading';
 import ContactForm from '@/components/ContactForm';
 import { Mail, Linkedin, Github, Instagram, Phone, MessageSquare } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Contact = () => {
   return (
@@ -31,56 +32,72 @@ const Contact = () => {
           
           <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
             {/* Contact Information and Social Media */}
-            <div className="w-full md:w-1/3">
-              <div className="bg-white shadow-md rounded-lg p-6">
-                <h3 className="text-2xl font-semibold mb-6">Connect with me</h3>
-                
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  <a href="mailto:venugopalchelliboyina@gmail.com" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
-                      <Mail size={24} className="text-white" />
-                    </div>
-                  </a>
+            <div className="w-full md:w-3/10">
+              <Card className="h-full">
+                <CardContent className="pt-6">
+                  <h3 className="text-2xl font-semibold mb-6">Connect with me</h3>
                   
-                  <a href="https://linkedin.com/in/chelliboyina-venu-gopal-b90420233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
-                      <Linkedin size={24} className="text-white" />
-                    </div>
-                  </a>
-                  
-                  <a href="https://github.com/venu019" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
-                      <Github size={24} className="text-white" />
-                    </div>
-                  </a>
-                  
-                  <a href="https://instagram.com" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
-                      <Instagram size={24} className="text-white" />
-                    </div>
-                  </a>
-                  
-                  <a href="tel:+919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
-                      <Phone size={24} className="text-white" />
-                    </div>
-                  </a>
-                  
-                  <a href="https://wa.me/919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                    <div className="bg-portfolio-dark-blue p-4 rounded-full">
-                      <MessageSquare size={24} className="text-white" />
-                    </div>
-                  </a>
-                </div>
-              </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
+                      <a href="mailto:venugopalchelliboyina@gmail.com" className="flex flex-col items-center">
+                        <div className="bg-gray-900 p-4 rounded-full">
+                          <Mail size={24} className="text-white" />
+                        </div>
+                      </a>
+                    </Card>
+                    
+                    <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
+                      <a href="https://linkedin.com/in/chelliboyina-venu-gopal-b90420233" className="flex flex-col items-center">
+                        <div className="bg-gray-900 p-4 rounded-full">
+                          <Linkedin size={24} className="text-white" />
+                        </div>
+                      </a>
+                    </Card>
+                    
+                    <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
+                      <a href="https://github.com/venu019" className="flex flex-col items-center">
+                        <div className="bg-gray-900 p-4 rounded-full">
+                          <Github size={24} className="text-white" />
+                        </div>
+                      </a>
+                    </Card>
+                    
+                    <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
+                      <a href="https://instagram.com" className="flex flex-col items-center">
+                        <div className="bg-gray-900 p-4 rounded-full">
+                          <Instagram size={24} className="text-white" />
+                        </div>
+                      </a>
+                    </Card>
+                    
+                    <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
+                      <a href="tel:+919705506233" className="flex flex-col items-center">
+                        <div className="bg-gray-900 p-4 rounded-full">
+                          <Phone size={24} className="text-white" />
+                        </div>
+                      </a>
+                    </Card>
+                    
+                    <Card className="flex items-center justify-center p-4 hover:bg-gray-50 transition-colors">
+                      <a href="https://wa.me/919705506233" className="flex flex-col items-center">
+                        <div className="bg-gray-900 p-4 rounded-full">
+                          <MessageSquare size={24} className="text-white" />
+                        </div>
+                      </a>
+                    </Card>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
             
             {/* Contact Form */}
-            <div className="w-full md:w-2/3">
-              <div className="bg-white shadow-md rounded-lg p-6">
-                <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
-                <ContactForm />
-              </div>
+            <div className="w-full md:w-7/10">
+              <Card className="h-full">
+                <CardContent className="pt-6">
+                  <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
+                  <ContactForm />
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
