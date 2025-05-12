@@ -11,6 +11,7 @@ import About from '@/components/About';
 import { ArrowDown, Mail, Linkedin, Github, Instagram, Phone, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ContactForm from '@/components/ContactForm';
+import EducationCard from '@/components/EducationCard';
 
 const Index = () => {
   // Sample projects data
@@ -35,18 +36,13 @@ const Index = () => {
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
       technologies: ['Flask', 'Docker', 'Kubernetes', 'GitHub Workflows', 'Tekton', 'OpenShift'],
       description: 'Developed a Flask app and deployed using Docker and Kubernetes, automating CI/CD with GitHub Workflows, Tekton, and OpenShift, reducing deployment time by 50%.'
-    },
-    {
-      id: 'portfolio',
-      title: 'Personal Portfolio Website',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
-      technologies: ['React', 'Tailwind CSS', 'Vite', 'TypeScript'],
-      description: 'Designed and developed a personal portfolio website using React, Tailwind CSS, and TypeScript.'
     }
   ];
 
   const programmingLanguages = ['Java', 'Python', 'JavaScript', 'HTML', 'CSS'];
   const webDevelopmentSkills = ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux'];
+  const databaseAndTools = ['MYSQL', 'MongoDB', 'GitHub', 'Docker' , 'Kubernetes'];
+  const csConcepts = ['Data Structures & Algorithms','Machine Learning','Cloud Computing','Computer Network']
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -57,6 +53,37 @@ const Index = () => {
       
       {/* About Section */}
       <About />
+
+      {/* Education Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <SectionHeading subtitle="My Education" title="Academic Background" />
+          
+          <div className="max-w-3xl mx-auto">
+            <EducationCard
+              school = "Sagi Ramakrishnam Raju Engineering College bhimavaram,AP" 
+              degree ="B.Tech in Information Technology"
+              timeline ="Jun 2021 - May 2024"
+              location ="" 
+              gpa=''
+            />
+            <EducationCard
+              school = "Smt.B.Seetha Polytechnic bhimavaram,AP" 
+              degree ="Diploma in Computer Engineering"
+              timeline ="Jun 2018 - May 2021"
+              location ="" 
+              gpa=''
+            />
+            <EducationCard
+              school = "Gitanjali Grammar High School Dhone,AP" 
+              degree ="SSC"
+              timeline ="May 2018"
+              location ="" 
+              gpa=''
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Work Experience Section */}
       <section className="py-16">
@@ -89,40 +116,19 @@ const Index = () => {
           <p className="text-center max-w-3xl mx-auto mb-12 text-lg text-portfolio-text-gray">
             Explore some of my recent projects. Each project represents unique challenges and solutions across different domains and technologies.
           </p>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto w-full justify-items-center">
             {featuredProjects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                image={project.image}
-                technologies={project.technologies}
-                description={project.description}
-              />
+              <div className="flex-shrink-0 w-[300px] md:w-[400px]"> {/* Control each card width */}
+                <ProjectCard
+                  key={project.id}
+                  id={project.id}
+                  title={project.title}
+                  image={project.image}
+                  technologies={project.technologies}
+                  description={project.description}
+                />
+              </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CS Concepts Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">CS Concepts</h2>
-          
-          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-            <span className="bg-gray-100 text-portfolio-blue px-4 py-2 rounded-full">
-              Data Structures & Algorithms
-            </span>
-            <span className="bg-gray-100 text-portfolio-blue px-4 py-2 rounded-full">
-              Machine Learning
-            </span>
-            <span className="bg-gray-100 text-portfolio-blue px-4 py-2 rounded-full">
-              Cloud Computing
-            </span>
-            <span className="bg-gray-100 text-portfolio-blue px-4 py-2 rounded-full">
-              Computer Networks
-            </span>
           </div>
         </div>
       </section>
@@ -135,17 +141,27 @@ const Index = () => {
           <p className="text-center max-w-3xl mx-auto mb-12 text-lg text-portfolio-text-gray">
             I've worked with a variety of technologies and tools throughout my education and projects. Here's an overview of my technical skills and expertise.
           </p>
-          
-          <div className="max-w-3xl mx-auto">
-            <SkillsSection
-              title="Programming Languages"
-              skills={programmingLanguages}
-            />
-            
-            <SkillsSection
-              title="Web Development"
-              skills={webDevelopmentSkills}
-            />
+          <div className="max-w-6xl mx-auto flex flex-wrap gap-8">
+            <div className="flex-1 min-w-[300px]">
+              <SkillsSection
+                title="Programming Languages"
+                skills={programmingLanguages}
+              />
+              <SkillsSection
+                title="Web Development"
+                skills={webDevelopmentSkills}
+              />
+            </div>
+            <div className="flex-1 min-w-[300px]">
+              <SkillsSection
+                title="Database & Tools"
+                skills={databaseAndTools}
+              />
+              <SkillsSection
+                title="CS Concepts"
+                skills={csConcepts}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -154,91 +170,44 @@ const Index = () => {
       <section id="contact" className="py-16">
         <div className="container mx-auto px-4">
           <SectionHeading subtitle="Get In Touch" title="Contact Me" />
-          
+
           <p className="text-center max-w-2xl mx-auto mb-12 text-lg text-portfolio-text-gray">
             I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out to me!
           </p>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Social Media Links */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Connect with me</h3>
-              
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
-                <a href="mailto:venugopalchelliboyina@gmail.com" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <Mail size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">Email</span>
+
+          <div className="flex flex-col md:flex-row gap-8 max-w-7xl mx-auto w-full">
+            {/* Left Side - Connect with me Card */}
+            {/* <div className="md:w-2/5 bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-center"> */}
+            <div className="md:w-2/5 h-48 bg-white rounded-2xl shadow-md p-6 flex flex-col justify-center items-center">
+              <h3 className="text-2xl font-semibold mb-6 text-center">Connect with me</h3>
+
+              <div className="flex justify-center items-center gap-4">
+                <a href="mailto:venugopalchelliboyina@gmail.com" className="hover:bg-gray-100 p-2 rounded-full transition">
+                  <Mail size={28} className="text-portfolio-dark-blue" />
                 </a>
-                
-                <a href="https://linkedin.com/in/chelliboyina-venu-gopal-b90420233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <Linkedin size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">LinkedIn</span>
+
+                <a href="https://linkedin.com/in/chelliboyina-venu-gopal-b90420233" className="hover:bg-gray-100 p-2 rounded-full transition">
+                  <Linkedin size={28} className="text-portfolio-dark-blue" />
                 </a>
-                
-                <a href="https://github.com/venu019" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <Github size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">GitHub</span>
+
+                <a href="https://github.com/venu019" className="hover:bg-gray-100 p-2 rounded-full transition">
+                  <Github size={28} className="text-portfolio-dark-blue" />
                 </a>
-                
-                <a href="https://instagram.com" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <Instagram size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">Instagram</span>
+
+                <a href="https://instagram.com" className="hover:bg-gray-100 p-2 rounded-full transition">
+                  <Instagram size={28} className="text-portfolio-dark-blue" />
                 </a>
-                
-                <a href="tel:+919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <Phone size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">Phone</span>
+
+                <a href="https://wa.me/919705506233" className="hover:bg-gray-100 p-2 rounded-full transition">
+                  <MessageSquare size={28} className="text-portfolio-dark-blue" />
                 </a>
-                
-                <a href="https://wa.me/919705506233" className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                  <div className="bg-gray-100 p-4 rounded-full mb-3">
-                    <MessageSquare size={24} className="text-portfolio-blue" />
-                  </div>
-                  <span className="text-sm">WhatsApp</span>
-                </a>
-              </div>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold mb-4">Contact Info</h4>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone size={20} className="text-portfolio-blue mr-3" />
-                    <span>+91 9705506233</span>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <Mail size={20} className="text-portfolio-blue mr-3" />
-                    <span>venugopalchelliboyina@gmail.com</span>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <Github size={20} className="text-portfolio-blue mr-3" />
-                    <span>github.com/venu019</span>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <Linkedin size={20} className="text-portfolio-blue mr-3" />
-                    <span className="break-all">linkedin.com/in/chelliboyina-venu-gopal-b90420233</span>
-                  </div>
-                </div>
               </div>
             </div>
-            
-            {/* Contact Form */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
-              
+
+            {/* Right Side - Send me a message Card */}
+            <div className="md:w-3/5 bg-white rounded-2xl shadow-md p-8">
+              <h3 className="text-2xl font-semibold mb-6 text-center">Send me a message</h3>
+
               <ContactForm />
             </div>
           </div>
