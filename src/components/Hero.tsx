@@ -2,6 +2,13 @@
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="pt-20 pb-10 px-4 md:px-6 bg-white dark:bg-gray-900">
       <div className="container mx-auto">
@@ -23,12 +30,19 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 mb-12">
-              <Button className="bg-portfolio-dark-blue hover:bg-portfolio-blue text-white px-8 py-6">
-                <a href="#projects">View My Work</a>
+              <Button 
+                className="bg-portfolio-dark-blue hover:bg-portfolio-blue text-white px-8 py-6"
+                onClick={() => scrollToSection('projects')}
+              >
+                View My Work
               </Button>
               
-              <Button variant="outline" className="border-gray-300 hover:bg-gray-100 px-8 py-6">
-                <a href="#contact">Contact Me</a>
+              <Button 
+                variant="outline" 
+                className="border-gray-300 hover:bg-gray-100 px-8 py-6"
+                onClick={() => scrollToSection('contact')}
+              >
+                Contact Me
               </Button>
             </div>
           </div>

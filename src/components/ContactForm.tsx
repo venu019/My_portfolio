@@ -5,7 +5,16 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/sonner";
 
-const ContactForm = () => {
+interface ContactFormProps {
+  onSubmit?: (formData: {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  }) => void;
+}
+
+const ContactForm = ({ onSubmit }: ContactFormProps) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,10 +36,8 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      toast.success('Message sent successfully!');
+    if (onSubmit) {
+      onSubmit(formData);
       setFormData({
         name: '',
         email: '',
@@ -38,7 +45,20 @@ const ContactForm = () => {
         message: ''
       });
       setIsSubmitting(false);
-    }, 1000);
+    } else {
+      // Fallback to simulation for backward compatibility
+      setTimeout(() => {
+        console.log('Form submitted:', formData);
+        toast.success('Message sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        setIsSubmitting(false);
+      }, 1000);
+    }
   };
 
   return (
