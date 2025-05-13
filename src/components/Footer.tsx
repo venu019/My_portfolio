@@ -23,7 +23,7 @@ const Footer = () => {
               <a href="mailto:venugopalchelliboyina@gmail.com" className="text-gray-300 hover:text-white" aria-label="Email">
                 <Mail size={20} />
               </a>
-              <a href="https://instagram.com" className="text-gray-300 hover:text-white" aria-label="Instagram">
+              <a href="https://www.instagram.com/t_h_e_v_e_n_u_7?igsh=bWtjeGw5b2tkOXU5" className="text-gray-300 hover:text-white" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
               <a href="tel:+919705506233" className="text-gray-300 hover:text-white" aria-label="Phone">
