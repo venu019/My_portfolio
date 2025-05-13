@@ -243,7 +243,7 @@ const Index = () => {
                   <Github size={28} className="text-portfolio-dark-blue" />
                 </a>
 
-                <a href="https://instagram.com" className="hover:bg-gray-100 p-2 rounded-full transition">
+                <a href="https://www.instagram.com/t_h_e_v_e_n_u_7?igsh=bWtjeGw5b2tkOXU5" className="hover:bg-gray-100 p-2 rounded-full transition">
                   <Instagram size={28} className="text-portfolio-dark-blue" />
                 </a>
 
