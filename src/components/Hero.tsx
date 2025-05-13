@@ -35,7 +35,7 @@ const Hero = () => {
 
           <div className="md:w-1/2 mt-8 md:mt-0">
             <img
-              src="https://drive.google.com/file/d/15GQe5B_ML-G6SfCYmc7pZGfohHib2S7p/view?usp=sharing"
+              src="public/lovable-uploads/6c5783e9-2400-4cc0-a6f7-dee234bdcd7a.png"
               alt="Developer workspace with laptop"
               className="w-full h-auto rounded-lg shadow-lg"
             />
