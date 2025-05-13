@@ -1,5 +1,6 @@
 
 import { Button } from '@/components/ui/button';
+import devImage from '/public/lovable-uploads/6c5783e9-2400-4cc0-a6f7-dee234bdcd7a.png';
 
 const Hero = () => {
   return (
@@ -35,7 +36,7 @@ const Hero = () => {
 
           <div className="md:w-1/2 mt-8 md:mt-0">
             <img
-              src="public/lovable-uploads/6c5783e9-2400-4cc0-a6f7-dee234bdcd7a.png"
+              src={devImage}
               alt="Developer workspace with laptop"
               className="w-full h-auto rounded-lg shadow-lg"
             />
